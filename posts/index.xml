@@ -6,7 +6,16 @@
     <description>Recent content in Posts on skypotatoes blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 21:07:04 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jan 2022 21:40:41 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second_post</title>
+      <link>https://skypotatoes.github.io/posts/second_post/</link>
+      <pubDate>Tue, 04 Jan 2022 21:40:41 +0000</pubDate>
+      
+      <guid>https://skypotatoes.github.io/posts/second_post/</guid>
+      <description>A second post just to make sure I know how to do this.</description>
+    </item>
+    
     <item>
       <title>The first post</title>
       <link>https://skypotatoes.github.io/posts/firstpost/</link>
