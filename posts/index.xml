@@ -6,7 +6,16 @@
     <description>Recent content in Posts on skypotatoes blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jan 2022 16:39:02 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jan 2022 22:39:47 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kata: Minimum Number of Coins</title>
+      <link>https://skypotatoes.github.io/posts/kataminnumcoins/</link>
+      <pubDate>Wed, 05 Jan 2022 22:39:47 +0000</pubDate>
+      
+      <guid>https://skypotatoes.github.io/posts/kataminnumcoins/</guid>
+      <description>This evening I decided to have a go at the kata &amp;ldquo;Minimum Number of Coins&amp;rdquo;. The first challenge in this kata is to validate the number given which can be quite varied. The amount may be either a number or a string. If it is a string, it may or may not be prefixed with &amp;ldquo;£&amp;rdquo; or suffixed with &amp;ldquo;p&amp;rdquo;. If it is a number, it can be either an integer or a float.</description>
+    </item>
+    
     <item>
       <title>Welcome</title>
       <link>https://skypotatoes.github.io/posts/welcome/</link>
