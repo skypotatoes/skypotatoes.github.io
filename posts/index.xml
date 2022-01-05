@@ -6,7 +6,16 @@
     <description>Recent content in Posts on skypotatoes blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jan 2022 16:33:38 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jan 2022 16:39:02 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>https://skypotatoes.github.io/posts/welcome/</link>
+      <pubDate>Wed, 05 Jan 2022 16:39:02 +0000</pubDate>
+      
+      <guid>https://skypotatoes.github.io/posts/welcome/</guid>
+      <description>Last night I followed this tutorial to build this blog that runs off a github repo. I thought this would be a better way to keep a track of my progress as a coder than merely keeping a repo filled with commented .js files, which I was doing here. I thought about moving everything over and formatting each item as a blog post, but I don&amp;rsquo;t think that&amp;rsquo;s really necessary. This blog will be used for updates and thoughts on problems I am working on and things that I am learning.</description>
+    </item>
+    
     <item>
       <title>Fourth</title>
       <link>https://skypotatoes.github.io/posts/fourth/</link>
@@ -23,15 +32,6 @@
       
       <guid>https://skypotatoes.github.io/posts/second_post/</guid>
       <description>A second post just to make sure I know how to do this.</description>
-    </item>
-    
-    <item>
-      <title>The first post</title>
-      <link>https://skypotatoes.github.io/posts/firstpost/</link>
-      <pubDate>Tue, 04 Jan 2022 21:07:04 +0000</pubDate>
-      
-      <guid>https://skypotatoes.github.io/posts/firstpost/</guid>
-      <description>A test post to see if this is working and how it looks.</description>
     </item>
     
   </channel>
