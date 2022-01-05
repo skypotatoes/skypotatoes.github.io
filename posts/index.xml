@@ -16,23 +16,5 @@
       <description>Last night I followed this tutorial to build this blog that runs off a github repo. I thought this would be a better way to keep a track of my progress as a coder than merely keeping a repo filled with commented .js files, which I was doing here. I thought about moving everything over and formatting each item as a blog post, but I don&amp;rsquo;t think that&amp;rsquo;s really necessary. This blog will be used for updates and thoughts on problems I am working on and things that I am learning.</description>
     </item>
     
-    <item>
-      <title>Fourth</title>
-      <link>https://skypotatoes.github.io/posts/fourth/</link>
-      <pubDate>Wed, 05 Jan 2022 16:33:38 +0000</pubDate>
-      
-      <guid>https://skypotatoes.github.io/posts/fourth/</guid>
-      <description>This is a fourth post. I did the third one wrong and lost it hahaha. This should appear as a blog post.</description>
-    </item>
-    
-    <item>
-      <title>Second_post</title>
-      <link>https://skypotatoes.github.io/posts/second_post/</link>
-      <pubDate>Tue, 04 Jan 2022 21:40:41 +0000</pubDate>
-      
-      <guid>https://skypotatoes.github.io/posts/second_post/</guid>
-      <description>A second post just to make sure I know how to do this.</description>
-    </item>
-    
   </channel>
 </rss>
