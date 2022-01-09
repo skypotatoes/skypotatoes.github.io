@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<title>SolvedMinNoCoins | skypotatoes blog</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.91.2" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://skypotatoes.github.io/css/index.css">
+<link rel="canonical" href="https://skypotatoes.github.io/posts/solvedminnocoins/">
+<link rel="alternate" type="application/rss+xml" href="" title="skypotatoes blog">
+
+<header>
+  
+    <a href="https://skypotatoes.github.io/" class="title">skypotatoes blog</a>
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>SolvedMinNoCoins</h1>
+    <time datetime="2022-01-09T02:11:04Z">January 09, 2022</time>
+  </header>
+  <p>I eventually solved this Kata and it&rsquo;s the first one I have come across which I didn&rsquo;t enjoy doing. I found the challenge to lack any consistency in what inputs were
+considered valid or invalid, and in the end it became a case of simply filtering out the edge cases through if-statements. It seemed entirely capricious as to why it
+wouldn&rsquo;t accept .5 but would accept .16, £1p was valid but £.70p. I didn&rsquo;t see the point of this at all and while, at first, it was an interesting exercise in using
+regex, it became clear from how ridiculous the edge cases were that regex wouldn&rsquo;t be enough. Simply tweaking the if-statements to get round inconsistent rules around
+valid inputs wasn&rsquo;t a fun exercise and only served to annoy me. I&rsquo;m glad I solved it, but only because I don&rsquo;t have to work on it anymore. I don&rsquo;t feel this was really
+a learning experience as other katas have been.</p>
+<pre tabindex="0"><code>function minCoins(amount){
+
+  console.log(typeof amount)
+  const regex = /(^£*)(\d*\.*\d*)(p*)$/     
+  if (typeof amount === &quot;string&quot; &amp;&amp; amount.match(regex)){  
+
+
+  const match = amount.match(regex);
+  const sign = match[1];
+  const pennies = match[3];
+      console.log(&quot;sign: &quot;+sign)
+      console.log(match)
+    amount = (match[2])
+    
+    if (match[3].length&gt;1){
+      console.log(&quot;You are here 1&quot;)
+      return 'Invalid input - enter a positive amount of money'
+    }
+    
+    if (sign.length&gt;1){
+      return 'Invalid input - enter a positive amount of money'
+    }
+    
+    if (amount.indexOf(&quot;.&quot;)!==amount.lastIndexOf(&quot;.&quot;)){
+      return 'Invalid input - enter a positive amount of money'
+    }
+    
+    const dot = match[2].indexOf(&quot;.&quot;)
+    const b4dot = match[2].slice(0, dot)
+    const sliceDot = match[2].slice(dot+1)
+    if ( match[2]&lt;1 &amp;&amp; match[2].indexOf(&quot;.&quot;)&gt;-1 &amp;&amp; match[1]===&quot;&quot; &amp;&amp; sliceDot.length&lt;2){
+      console.log(&quot;You are here 0&quot;)
+      return 'Invalid input - enter a positive amount of money'      
+    }
+    
+    if (sign === &quot;£&quot; &amp;&amp; pennies ===&quot;p&quot; &amp;&amp; b4dot.length &lt;1 &amp;&amp; dot!== -1){
+      return 'Invalid input - enter a positive amount of money'     
+    }
+ 
+    amount = Number(match[2]) 
+       
+    if (sign===&quot;£&quot; &amp;&amp; amount%1===0){
+      amount *= 100
+    }
+    
+
+    
+  } else if (typeof amount === &quot;string&quot; &amp;&amp; !amount.match(regex)){
+    return `Invalid input - enter a positive amount of money`
+  }
+  console.log(&quot;am:&quot;+amount)
+
+  console.log(&quot;you are here 0,&quot; +typeof amount)
+  if (typeof amount === &quot;number&quot; &amp;&amp; amount%1!==0){    
+    console.log(&quot;you are here 1&quot;)
+    amount = amount.toFixed(2)*100
+  }
+  console.log(&quot;amount&quot;+amount)
+  if (typeof amount === &quot;number&quot; &amp;&amp; amount&lt;1){
+    return `Invalid input - enter a positive amount of money`
+  }
+      
+  const coins = {&quot;£2 coin&quot;:0, &quot;£1 coin&quot;:0, &quot;50p coin&quot;:0, &quot;20p coin&quot;:0, &quot;10p coin&quot;:0, &quot;5p coin&quot;:0, &quot;2p coin&quot;:0, &quot;1p coin&quot;:0}
+  var remaining = 0;
+  
+
+  coins[&quot;£2 coin&quot;] = Math.floor(amount/200)
+  remaining = amount%200
+  coins[&quot;£1 coin&quot;] = Math.floor(remaining/100)
+  remaining = remaining%100
+  coins[&quot;50p coin&quot;] = Math.floor(remaining/50)
+  remaining = remaining%50
+  coins[&quot;20p coin&quot;] = Math.floor(remaining/20)
+  remaining = remaining%20
+  coins[&quot;10p coin&quot;] = Math.floor(remaining/10)
+  remaining = remaining%10
+  coins[&quot;5p coin&quot;] = Math.floor(remaining/5)
+  remaining = remaining%5
+  coins[&quot;2p coin&quot;] = Math.floor(remaining/2)
+  remaining = remaining%2
+  coins[&quot;1p coin&quot;] = Math.floor(remaining)
+  
+  console.log(coins)
+  
+  for (denomination in coins){
+    if (coins[denomination] === 0){
+      delete coins[denomination]
+    }
+  }
+  console.log(coins)
+  
+  var returnStr = &quot;&quot;
+  
+  for (denomination in coins){
+    returnStr+= `${coins[denomination]} ${denomination}, `
+  }
+  
+  returnStr = returnStr.slice(0,returnStr.length-2)
+  console.log(returnStr)
+  
+  returnStr = returnStr.split(&quot;, &quot;)
+  console.log(returnStr)
+  for (entry in returnStr){
+    split=returnStr[entry].split(&quot; &quot;)  
+    console.log(split)
+    console.log(returnStr[entry])
+    if (split[0]&gt;1){
+      returnStr[entry]+=&quot;s&quot;
+    }
+  }
+  returnStr = returnStr.join(&quot;, &quot;)
+  
+  if (returnStr.lastIndexOf(&quot;,&quot;)&gt;-1){
+    returnStr = returnStr.split(&quot;&quot;)
+    returnStr.splice(returnStr.lastIndexOf(&quot;,&quot;),2,&quot; and &quot;)
+    returnStr = returnStr.join(&quot;&quot;)
+  }
+   
+  return returnStr;
+  }
+</code></pre>
+</article>
+
+
+
+</html>

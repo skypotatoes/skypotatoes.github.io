@@ -6,7 +6,16 @@
     <description>Recent content on skypotatoes blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jan 2022 22:39:47 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jan 2022 02:11:04 +0000</lastBuildDate><atom:link href="https://skypotatoes.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SolvedMinNoCoins</title>
+      <link>https://skypotatoes.github.io/posts/solvedminnocoins/</link>
+      <pubDate>Sun, 09 Jan 2022 02:11:04 +0000</pubDate>
+      
+      <guid>https://skypotatoes.github.io/posts/solvedminnocoins/</guid>
+      <description>I eventually solved this Kata and it&amp;rsquo;s the first one I have come across which I didn&amp;rsquo;t enjoy doing. I found the challenge to lack any consistency in what inputs were considered valid or invalid, and in the end it became a case of simply filtering out the edge cases through if-statements. It seemed entirely capricious as to why it wouldn&amp;rsquo;t accept .5 but would accept .16, £1p was valid but £.</description>
+    </item>
+    
     <item>
       <title>Kata: Minimum Number of Coins</title>
       <link>https://skypotatoes.github.io/posts/kataminnumcoins/</link>
